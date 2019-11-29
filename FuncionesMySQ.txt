@@ -1,0 +1,59 @@
+create database universidad;
+use universidad;
+create table estudiante (nota int);
+insert into estudiante value (3);
+insert into estudiante value (4);
+
+---------------------------------------
+
+delimiter $$
+
+create function insertarNota(Nt int)
+returns int
+begin
+	
+    insert into estudiante value (Nt);
+	return Nt;
+end$$
+
+delimiter ;
+
+select insertarNota(8);
+
+------------------------------------------
+
+delimiter $$
+
+create function promedioNota()
+returns int
+begin
+	declare prom int;
+    select avg(nota) into prom
+    from estudiante;
+	return prom;
+end$$
+
+delimiter ;
+
+-------------------------------------
+
+delimiter $$
+
+create function MinyMax()
+returns char(50)
+begin
+	declare maximo int;
+    declare minimo int;
+    
+    select max(nota) into maximo
+    from estudiante;
+    select min(nota) into minimo
+    from estudiante;
+    
+	return concat('maximo:',maximo,' ','minimo:',minimo);
+end$$
+
+delimiter ;
+
+-------------------------------------------------------------------
+

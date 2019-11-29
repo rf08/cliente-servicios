@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-insertar" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/insertar"/>
+        <property name="wsdl-insertar" location="xml-resources/web-service-references/insertar/wsdl/localhost_8080/Servicios/insertar.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/insertar" destdir="${build.generated.dir}/jax-wsCache/insertar" wsdl="${wsdl-insertar}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Servicios/insertar?wsdl" xnocompile="true" xendorsed="true" package="WS">
+            <depends file="${wsdl-insertar}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/insertar"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/insertar">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-insertar" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/insertar"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/WS"/>
+    </target>
+    <target name="wsimport-client-Promedio" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Promedio"/>
+        <property name="wsdl-Promedio" location="xml-resources/web-service-references/Promedio/wsdl/localhost_8080/Servicios/Promedio.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Promedio" destdir="${build.generated.dir}/jax-wsCache/Promedio" wsdl="${wsdl-Promedio}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Servicios/Promedio?wsdl" xnocompile="true" xendorsed="true" package="WS1">
+            <depends file="${wsdl-Promedio}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Promedio"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Promedio">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Promedio" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Promedio"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/WS1"/>
+    </target>
+    <target name="wsimport-client-MaximoyMinimo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MaximoyMinimo"/>
+        <property name="wsdl-MaximoyMinimo" location="xml-resources/web-service-references/MaximoyMinimo/wsdl/localhost_8080/Servicios/MaximoyMinimo.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MaximoyMinimo" destdir="${build.generated.dir}/jax-wsCache/MaximoyMinimo" wsdl="${wsdl-MaximoyMinimo}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Servicios/MaximoyMinimo?wsdl" xnocompile="true" xendorsed="true" package="WS2">
+            <depends file="${wsdl-MaximoyMinimo}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MaximoyMinimo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MaximoyMinimo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MaximoyMinimo" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MaximoyMinimo"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/WS2"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-insertar, wsimport-client-Promedio, wsimport-client-MaximoyMinimo"/>
+</project>

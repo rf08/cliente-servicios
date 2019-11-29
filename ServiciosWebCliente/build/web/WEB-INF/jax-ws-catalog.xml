@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Servicios/insertar?wsdl" uri="wsdl/localhost_8080/Servicios/insertar.wsdl"/>
+    <system systemId="http://localhost:8080/Servicios/insertar?xsd=1" uri="wsdl/localhost_8080/Servicios/insertar.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Servicios/Promedio?wsdl" uri="wsdl/localhost_8080/Servicios/Promedio.wsdl"/>
+    <system systemId="http://localhost:8080/Servicios/Promedio?xsd=1" uri="wsdl/localhost_8080/Servicios/Promedio.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Servicios/MaximoyMinimo?wsdl" uri="wsdl/localhost_8080/Servicios/MaximoyMinimo.wsdl"/>
+    <system systemId="http://localhost:8080/Servicios/MaximoyMinimo?xsd=1" uri="wsdl/localhost_8080/Servicios/MaximoyMinimo.xsd_1.xsd"/>
+</catalog>
